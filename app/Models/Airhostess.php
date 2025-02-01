@@ -3,9 +3,10 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
-class airhostess extends Model
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+class  Airhostess extends Model
 {
+      use HasFactory;
     protected $fillable =([
         'name',
         'email',

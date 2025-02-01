@@ -18,8 +18,7 @@ class AirhostessResource extends Resource
     protected static ?string $model = Airhostess::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-phone-arrow-up-right';
-     protected static ?string $navigationGroup = 'Air mangment';
-            protected static ?int $navigationSort = 3;
+        protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {
@@ -34,6 +33,9 @@ class AirhostessResource extends Resource
                     ->maxLength(255),
                     
                 Forms\Components\TextInput::make('filghtnumber')
+                    ->required()
+                    ->maxLength(255),
+                     Forms\Components\TextInput::make('age')
                     ->required()
                     ->maxLength(255),
             ]);
